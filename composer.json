@@ -1,0 +1,48 @@
+{
+    "name": "todayqq/searchy",
+    "description": "Laravel Searchy makes user driven searching easy with fuzzy search, basic string matching, Levenshtein Distance and more.",
+    "keywords": ["laravel","search","fuzzy"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "angkee",
+            "email": "angkee@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "illuminate/support": "^4.2|^5|^6|^7|^8|^9"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.4 || ^4.0 || ^5.0",
+        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.3 || ^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TomLingham\\Searchy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TomLingham\\Tests\\Searchy\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "TomLingham\\Searchy\\SearchyServiceProvider"
+            ],
+            "aliases": {
+                "Searchy": "TomLingham\\Searchy\\Facades\\Searchy"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
